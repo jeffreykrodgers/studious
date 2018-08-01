@@ -17,9 +17,9 @@ import Authorized from '../../components/Authorized/Authorized';
 import Public from '../../components/Public/Public';
 import Index from '../../pages/Index/Index';
 import Documents from '../../pages/Documents/Documents';
-import NewDocument from '../../pages/NewDocument/NewDocument';
-import ViewDocument from '../../pages/ViewDocument/ViewDocument';
-import EditDocument from '../../pages/EditDocument/EditDocument';
+import NewDocument from '../../pages/Documents/NewDocument/NewDocument';
+import ViewDocument from '../../pages/Documents/ViewDocument/ViewDocument';
+import EditDocument from '../../pages/Documents/EditDocument/EditDocument';
 import Signup from '../../pages/Signup/Signup';
 import Login from '../../pages/Login/Login';
 import Logout from '../../pages/Logout/Logout';
@@ -47,6 +47,7 @@ const StyledApp = styled.div`
   > .container {
     margin-bottom: 80px;
     padding-bottom: 20px;
+    margin-top: 50px;
   }
 
   .verify-email {

@@ -1,10 +1,11 @@
 {
   "public": {
-    "productName": "Product Name",
+    "productName": "Studious",
+    "companyName": "Studious Creative LLC.",
     "copyrightStartYear": "2018",
-    "twitterUsername": "product",
-    "facebookUsername": "product",
-    "productAddress": "1658 N. Milwaukee Ave., #393, Chicago, IL 60647"
+    "twitterUsername": "@studiouscreative",
+    "facebookUsername": "studiouscreative",
+    "productAddress": "224 Maugers Mill Rd., Pottstown, PA 19464"
   },
   "private": {
     "MAIL_URL": "",
@@ -28,6 +29,6 @@
         "loginStyle": "popup"
       }
     },
-    "supportEmail": "Customer Support <support@product.com>"
+    "supportEmail": "Customer Support <support@studiouscreative.co>"
   }
 }

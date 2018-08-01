@@ -10,12 +10,12 @@ const StyledFooter = styled.div`
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #fff;
-  border-top: 1px solid var(--gray-lighter);
+  background-color: var(--dark);
+  color: var(--white);
   padding: 20px 0;
 
   p {
-    color: var(--gray-light);
+    color: var(--white);
     font-size: 14px;
   }
 
@@ -32,14 +32,14 @@ const StyledFooter = styled.div`
     }
 
     a {
-      color: var(--gray-light);
+      color: var(--white);
     }
 
     a:hover,
     a:active,
     a:focus {
       text-decoration: none;
-      color: var(--gray);
+      color: var(--white);
     }
   }
 
@@ -50,7 +50,7 @@ const StyledFooter = styled.div`
   }
 `;
 
-const { productName, copyrightStartYear } = Meteor.settings.public;
+const { companyName, copyrightStartYear } = Meteor.settings.public;
 const copyrightYear = () => {
   const currentYear = year();
   return currentYear === copyrightStartYear ? copyrightStartYear : `${copyrightStartYear}-${currentYear}`;
@@ -59,7 +59,7 @@ const copyrightYear = () => {
 const Footer = () => (
   <StyledFooter>
     <Grid>
-      <p className="pull-left">&copy; {copyrightYear()} {productName}</p>
+      <p className="pull-left">&copy; {copyrightYear()} {companyName}</p>
       <ul className="pull-right">
         <li><Link to="/terms">Terms<span className="hidden-xs"> of Service</span></Link></li>
         <li><Link to="/privacy">Privacy<span className="hidden-xs"> Policy</span></Link></li>

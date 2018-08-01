@@ -7,6 +7,7 @@ import { ThemeProvider, injectGlobal } from 'styled-components';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import { transparentize } from 'polished';
 import { Meteor } from 'meteor/meteor';
 import { Bert } from 'meteor/themeteorchef:bert';
 import App from '../../ui/layouts/App/App';
@@ -42,11 +43,20 @@ injectGlobal`
     --cb-green: #00D490;
     --cb-yellow: #FFCF50;
     --cb-red: #DA5847;
+    
+    --orange: #F17300;
+    --blue: #002B42;
+    --dark: #171717;
+    --white: #FFFFFF;
+    
+    --transparent: rgba(0,0,0,0);
+    --dark-trans: rgba(23,23,23,.8);
   }
 
   html {
     position: relative;
     min-height: 100%;
+    background: linear-gradient(to right, var(--blue), var(--dark));
   }
   
   body {
@@ -55,13 +65,27 @@ injectGlobal`
     padding: 0;
     font-size: 14px;
     line-height: 20px;
+    background: none;
+    color: var(--white);
+    font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
   .navbar {
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: var(--white);
+    font-family: "Questrial", sans-serif;
+    background: linear-gradient(to bottom, var(--dark-trans), var(--transparent));
+  }
+  
+  .navbar-default .navbar-nav > li > a {
+    color: var(--white);
+    
+    :hover {
+      color: transparentize(.5, var(--white));
+    }
   }
 
   form label {
