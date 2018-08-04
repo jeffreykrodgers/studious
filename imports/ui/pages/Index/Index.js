@@ -5,10 +5,10 @@ import { lighten, darken } from 'polished';
 
 const StyledIndex = styled.div`
   padding: 20px;
-  background: var(--cb-blue);
   text-align: center;
   border-radius: 3px;
   color: #fff;
+  height: 100vh;
 
   img {
     width: 100px;
@@ -39,7 +39,6 @@ const StyledIndex = styled.div`
 
   footer {
     margin: 20px -20px -20px;
-    border-top: 1px solid ${darken(0.1, '#4285F4')};
     padding: 20px;
 
     p {
@@ -73,21 +72,53 @@ const StyledIndex = styled.div`
 `;
 
 const Index = () => (
-  <StyledIndex>
-    <img
-      src="https://s3-us-west-2.amazonaws.com/cleverbeagle-assets/graphics/email-icon.png"
-      alt="Clever Beagle"
-    />
-    <h1>Pup</h1>
-    <p>A boilerplate for products.</p>
-    <div>
-      <Button href="http://cleverbeagle.com/pup">Read the Docs</Button>
-      <Button href="https://github.com/cleverbeagle/pup"><i className="fa fa-star" /> Star on GitHub</Button>
-    </div>
-    <footer>
-      <p>Want to ensure that your product sees the light of day? <a href="https://cleverbeagle.com?utm_source=pup&utm_medium=app&utm_campaign=oss">Work with Clever Beagle</a>.</p>
-    </footer>
-  </StyledIndex>
+  <div>
+    <StyledIndex id="about">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/cleverbeagle-assets/graphics/email-icon.png"
+        alt="Clever Beagle"
+      />
+      <h1>Pup</h1>
+      <p>A boilerplate for products.</p>
+      <div>
+        <Button href="http://cleverbeagle.com/pup">Read the Docs</Button>
+        <Button href="https://github.com/cleverbeagle/pup"><i className="fa fa-star" /> Star on GitHub</Button>
+      </div>
+      <footer>
+        <p>Want to ensure that your product sees the light of day? <a href="https://cleverbeagle.com?utm_source=pup&utm_medium=app&utm_campaign=oss">Work with Clever Beagle</a>.</p>
+      </footer>
+    </StyledIndex>
+    <StyledIndex id="location">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/cleverbeagle-assets/graphics/email-icon.png"
+        alt="Clever Beagle"
+      />
+      <h1>Pup</h1>
+      <p>A boilerplate for products.</p>
+      <div>
+        <Button href="http://cleverbeagle.com/pup">Read the Docs</Button>
+        <Button href="https://github.com/cleverbeagle/pup"><i className="fa fa-star" /> Star on GitHub</Button>
+      </div>
+      <footer>
+        <p>Want to ensure that your product sees the light of day? <a href="https://cleverbeagle.com?utm_source=pup&utm_medium=app&utm_campaign=oss">Work with Clever Beagle</a>.</p>
+      </footer>
+    </StyledIndex>
+    <StyledIndex id="studios">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/cleverbeagle-assets/graphics/email-icon.png"
+        alt="Clever Beagle"
+      />
+      <h1>Pup</h1>
+      <p>A boilerplate for products.</p>
+      <div>
+        <Button href="http://cleverbeagle.com/pup">Read the Docs</Button>
+        <Button href="https://github.com/cleverbeagle/pup"><i className="fa fa-star" /> Star on GitHub</Button>
+      </div>
+      <footer>
+        <p>Want to ensure that your product sees the light of day? <a href="https://cleverbeagle.com?utm_source=pup&utm_medium=app&utm_campaign=oss">Work with Clever Beagle</a>.</p>
+      </footer>
+    </StyledIndex>
+  </div>
 );
 
 export default Index;

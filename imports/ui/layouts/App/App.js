@@ -44,10 +44,10 @@ import getUserName from '../../../modules/get-user-name';
 const StyledApp = styled.div`
   visibility: ${props => (props.ready && !props.loading ? 'visible' : 'hidden')};
 
-  > .container {
+  > .container-fluid, > .container {
     margin-bottom: 80px;
     padding-bottom: 20px;
-    margin-top: 50px;
+    margin-top: 66px;
   }
 
   .verify-email {
@@ -104,7 +104,7 @@ class App extends React.Component {
           : ''}
         {props.authenticated ? <GDPRConsentModal userId={props.userId} /> : ''}
         <Navigation {...props} {...state} />
-        <Grid>
+        <Grid fluid>
           <Switch>
             <Route exact name="index" path="/" component={Index} />
             <Authenticated exact path="/documents" component={Documents} setAfterLoginPath={setAfterLoginPath} {...props} {...state} />

@@ -7,15 +7,15 @@ import PublicNavigation from '../PublicNavigation/PublicNavigation';
 import AuthenticatedNavigation from '../AuthenticatedNavigation/AuthenticatedNavigation';
 
 const Navigation = props => (
-  <Navbar collapseOnSelect>
+  <Navbar collapseOnSelect fluid inverse fixedTop>
     <Navbar.Header>
       <Navbar.Brand>
-        <Link to="/">{Meteor.settings.public.productName}</Link>
+        <Link to="/"><img src="/logo.svg" alt="Studious" /></Link>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
-      {!props.authenticated ? <PublicNavigation /> : <AuthenticatedNavigation {...props} />}
+      {!props.authenticated ? <PublicNavigation {...props} /> : <AuthenticatedNavigation {...props} />}
     </Navbar.Collapse>
   </Navbar>
 );

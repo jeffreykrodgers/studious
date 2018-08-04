@@ -7,7 +7,6 @@ import { ThemeProvider, injectGlobal } from 'styled-components';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import { transparentize } from 'polished';
 import { Meteor } from 'meteor/meteor';
 import { Bert } from 'meteor/themeteorchef:bert';
 import App from '../../ui/layouts/App/App';
@@ -70,21 +69,81 @@ injectGlobal`
     font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
+  .navbar-inverse .navbar-nav > a, .navbar-inverse .navbar-nav > li > a {
+    color: var(--white);
+    font-size: 16px;
+    padding: 16px 32px;
+    
+    :hover {
+      color: var(--orange);
+      text-decoration: none;
+
+      &:after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        background: var(--orange);
+        display: block;
+        margin: 8px auto -10px;
+      }      
+    }
+    
+    :focus {
+      outline: none;
+    }
+  }
+  
+  .navbar-right {
+    margin-left: 16px;
+  }
+  
+  .navbar-brand {
+    padding: 4px 8px;
+    
+    img {
+      width: 180px;
+    }
+  }
+  
+  &.scrollnav {
+    height: 54px;
+    display: flex;
+    justify-content: center;
+  }
+  
   .navbar {
     border: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    padding: 8px;
+    margin-bottom: 4px;
     color: var(--white);
     font-family: "Questrial", sans-serif;
     background: linear-gradient(to bottom, var(--dark-trans), var(--transparent));
-  }
-  
-  .navbar-default .navbar-nav > li > a {
-    color: var(--white);
+   
     
-    :hover {
-      color: transparentize(.5, var(--white));
+    .nav-pills {
+      a {
+        border: 2px solid var(--white);
+        border-radius: 4px;
+        margin: 6px 4px 6px 4px;
+      }
+      
+      & > li.orange > a {
+        border-color: var(--orange);
+      }
+      
+      & > li > a {
+      padding: 8px 20px;
+      color: var(--white);
+
+     
+        &:hover {
+         border-color: var(--orange);
+         
+         &:after {
+            display: none;
+         }
+        }
+      }
     }
   }
 
