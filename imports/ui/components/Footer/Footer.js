@@ -121,7 +121,7 @@ const Footer = () => (
           </section>
           <section>
             <div className="group-header">
-              <h3>©2018 Studious Creative LLC</h3>
+              <h3>©{copyrightYear()} {companyName}</h3>
               <h2>studiouscreative.co</h2>
             </div>
           </section>
@@ -152,7 +152,7 @@ const Footer = () => (
             </div>
           </section>
           <section className="social">
-            <h4>Follow Us</h4>
+            <h3>Follow Us</h3>
             <hr />
             <Link to="/"><Icon iconStyle="brand" icon="facebook" /></Link>
             <Link to="/"><Icon iconStyle="brand" icon="instagram" /></Link>

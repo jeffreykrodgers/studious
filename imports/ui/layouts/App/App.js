@@ -46,7 +46,11 @@ const StyledApp = styled.div`
 
   > .container-fluid, > .container {
     margin-bottom: 80px;
-    padding-bottom: 20px;
+    //padding: 0 0 20px;
+    
+    .no-padding {
+      padding: 0 0 20px;
+    }
   }
 
   .verify-email {
@@ -77,6 +81,14 @@ const StyledApp = styled.div`
       margin: 20px 0 0;
      }    
   };
+  
+  h1 {
+    font-size: 48px;
+    
+    & strong {
+      color: var(--orange);
+    }
+  }
   
   h2 {
     font-size: 32px;

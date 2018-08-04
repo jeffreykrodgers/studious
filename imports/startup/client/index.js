@@ -48,8 +48,10 @@ injectGlobal`
     --dark: #171717;
     --white: #FFFFFF;
     
-    --transparent: rgba(0,0,0,0);
+    --blue-trans: rgba(0,43,66,.6);
     --dark-trans: rgba(23,23,23,.8);
+
+    --transparent: rgba(0,0,0,0);
   }
 
   html {
