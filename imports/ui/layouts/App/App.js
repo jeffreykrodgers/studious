@@ -47,7 +47,6 @@ const StyledApp = styled.div`
   > .container-fluid, > .container {
     margin-bottom: 80px;
     padding-bottom: 20px;
-    margin-top: 66px;
   }
 
   .verify-email {
@@ -65,6 +64,70 @@ const StyledApp = styled.div`
 
     .btn {
       padding: 0;
+    }
+  }
+  
+  .group-header {
+    &:after {
+      content: '';
+      height: 4px;
+      width: 48px;
+      background: var(--orange);
+      display: block;
+      margin: 20px 0 0;
+     }    
+  };
+  
+  h2 {
+    font-size: 32px;
+    margin-top: 4px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--orange);
+    margin-bottom: 0;
+  }
+  
+  h4 {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  
+  h5 {
+    font-size: 16px;
+    font-weight: 200;
+  }
+  
+  hr {
+    height: 4px;
+    width: 48px;
+    background: var(--orange);
+    display: block;
+    margin: 20px 0;
+    border: 0;
+  }
+  
+  .btn {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+  
+  .btn-default {
+    background: none;
+    border: 2px solid var(--white);
+    color: var(--white);
+  }
+  
+  .btn-primary {
+    background: none;
+    border: 2px solid var(--orange);
+    color: var(--white);
+    transition: all .1s;
+    
+    &:hover {
+      background: var(--orange);
     }
   }
 `;

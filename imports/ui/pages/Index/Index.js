@@ -2,13 +2,14 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import { lighten, darken } from 'polished';
+import VisibilitySensor from 'react-visibility-sensor';
 
 const StyledIndex = styled.div`
   padding: 20px;
   text-align: center;
   border-radius: 3px;
   color: #fff;
-  height: 100vh;
+  min-height: 100vh;
 
   img {
     width: 100px;
@@ -71,53 +72,80 @@ const StyledIndex = styled.div`
   }
 `;
 
+const OnChange = (val) => {
+  console.log('Changin', val);
+};
+
 const Index = () => (
   <div>
-    <StyledIndex id="about">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/cleverbeagle-assets/graphics/email-icon.png"
-        alt="Clever Beagle"
-      />
-      <h1>Pup</h1>
-      <p>A boilerplate for products.</p>
-      <div>
-        <Button href="http://cleverbeagle.com/pup">Read the Docs</Button>
-        <Button href="https://github.com/cleverbeagle/pup"><i className="fa fa-star" /> Star on GitHub</Button>
-      </div>
-      <footer>
-        <p>Want to ensure that your product sees the light of day? <a href="https://cleverbeagle.com?utm_source=pup&utm_medium=app&utm_campaign=oss">Work with Clever Beagle</a>.</p>
-      </footer>
-    </StyledIndex>
-    <StyledIndex id="location">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/cleverbeagle-assets/graphics/email-icon.png"
-        alt="Clever Beagle"
-      />
-      <h1>Pup</h1>
-      <p>A boilerplate for products.</p>
-      <div>
-        <Button href="http://cleverbeagle.com/pup">Read the Docs</Button>
-        <Button href="https://github.com/cleverbeagle/pup"><i className="fa fa-star" /> Star on GitHub</Button>
-      </div>
-      <footer>
-        <p>Want to ensure that your product sees the light of day? <a href="https://cleverbeagle.com?utm_source=pup&utm_medium=app&utm_campaign=oss">Work with Clever Beagle</a>.</p>
-      </footer>
-    </StyledIndex>
-    <StyledIndex id="studios">
-      <img
-        src="https://s3-us-west-2.amazonaws.com/cleverbeagle-assets/graphics/email-icon.png"
-        alt="Clever Beagle"
-      />
-      <h1>Pup</h1>
-      <p>A boilerplate for products.</p>
-      <div>
-        <Button href="http://cleverbeagle.com/pup">Read the Docs</Button>
-        <Button href="https://github.com/cleverbeagle/pup"><i className="fa fa-star" /> Star on GitHub</Button>
-      </div>
-      <footer>
-        <p>Want to ensure that your product sees the light of day? <a href="https://cleverbeagle.com?utm_source=pup&utm_medium=app&utm_campaign=oss">Work with Clever Beagle</a>.</p>
-      </footer>
-    </StyledIndex>
+    <VisibilitySensor partialVisibility onChange={OnChange}>
+      <StyledIndex>
+        <img
+          src="https://s3-us-west-2.amazonaws.com/cleverbeagle-assets/graphics/email-icon.png"
+          alt="Clever Beagle"
+        />
+        <h1>Recording Studios by the Hour</h1>
+        <p>A boilerplate for products.</p>
+        <div>
+          <Button href="http://cleverbeagle.com/pup">Read the Docs</Button>
+          <Button href="https://github.com/cleverbeagle/pup"><i className="fa fa-star" /> Star on GitHub</Button>
+        </div>
+        <footer>
+          <p>Want to ensure that your product sees the light of day? <a href="https://cleverbeagle.com?utm_source=pup&utm_medium=app&utm_campaign=oss">Work with Clever Beagle</a>.</p>
+        </footer>
+      </StyledIndex>
+    </VisibilitySensor>
+    <VisibilitySensor partialVisibility onChange={OnChange}>
+      <StyledIndex id="about">
+        <img
+          src="https://s3-us-west-2.amazonaws.com/cleverbeagle-assets/graphics/email-icon.png"
+          alt="Clever Beagle"
+        />
+        <h1>Shared Studio Space</h1>
+        <p>A boilerplate for products.</p>
+        <div>
+          <Button href="http://cleverbeagle.com/pup">Read the Docs</Button>
+          <Button href="https://github.com/cleverbeagle/pup"><i className="fa fa-star" /> Star on GitHub</Button>
+        </div>
+        <footer>
+          <p>Want to ensure that your product sees the light of day? <a href="https://cleverbeagle.com?utm_source=pup&utm_medium=app&utm_campaign=oss">Work with Clever Beagle</a>.</p>
+        </footer>
+      </StyledIndex>
+    </VisibilitySensor>
+    <VisibilitySensor partialVisibility onChange={OnChange}>
+      <StyledIndex id="location">
+        <img
+          src="https://s3-us-west-2.amazonaws.com/cleverbeagle-assets/graphics/email-icon.png"
+          alt="Clever Beagle"
+        />
+        <h1>Our Studio</h1>
+        <p>A boilerplate for products.</p>
+        <div>
+          <Button href="http://cleverbeagle.com/pup">Read the Docs</Button>
+          <Button href="https://github.com/cleverbeagle/pup"><i className="fa fa-star" /> Star on GitHub</Button>
+        </div>
+        <footer>
+          <p>Want to ensure that your product sees the light of day? <a href="https://cleverbeagle.com?utm_source=pup&utm_medium=app&utm_campaign=oss">Work with Clever Beagle</a>.</p>
+        </footer>
+      </StyledIndex>
+    </VisibilitySensor>
+    <VisibilitySensor partialVisibility onChange={OnChange}>
+      <StyledIndex id="studios">
+        <img
+          src="https://s3-us-west-2.amazonaws.com/cleverbeagle-assets/graphics/email-icon.png"
+          alt="Clever Beagle"
+        />
+        <h1>Available Spaces</h1>
+        <p>A boilerplate for products.</p>
+        <div>
+          <Button href="http://cleverbeagle.com/pup">Read the Docs</Button>
+          <Button href="https://github.com/cleverbeagle/pup"><i className="fa fa-star" /> Star on GitHub</Button>
+        </div>
+        <footer>
+          <p>Want to ensure that your product sees the light of day? <a href="https://cleverbeagle.com?utm_source=pup&utm_medium=app&utm_campaign=oss">Work with Clever Beagle</a>.</p>
+        </footer>
+      </StyledIndex>
+    </VisibilitySensor>
   </div>
 );
 

@@ -39,6 +39,7 @@
     "react-router-bootstrap": "^0.24.4",
     "react-router-dom": "^4.2.2",
     "react-scrollchor": "^6.0.0",
+    "react-visibility-sensor": "^3.11.1",
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0",
     "simpl-schema": "^1.5.0",
