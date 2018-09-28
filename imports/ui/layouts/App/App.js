@@ -43,6 +43,10 @@ import getUserName from '../../../modules/get-user-name';
 
 const StyledApp = styled.div`
   visibility: ${props => (props.ready && !props.loading ? 'visible' : 'hidden')};
+  
+  > .container-fluid {
+    min-height: 100vh;
+  }
 
   > .container-fluid, > .container {
     margin-bottom: 80px;
@@ -76,71 +80,54 @@ const StyledApp = styled.div`
       content: '';
       height: 4px;
       width: 48px;
-      background: var(--orange);
+      background: var(--accent);
       display: block;
       margin: 20px 0 0;
      }    
   };
   
   h1 {
-    font-size: 48px;
+    font-size: 32px;
     
     & strong {
-      color: var(--orange);
+      color: var(--accent);
     }
   }
   
   h2 {
-    font-size: 32px;
+    font-size: 24px;
     margin-top: 4px;
   }
   
   h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    color: var(--orange);
+    color: var(--accent);
     margin-bottom: 0;
+    
+    strong {
+      color: var(--white);
+      font-weight: 400;
+    }
   }
   
   h4 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
   }
   
   h5 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 200;
   }
   
   hr {
     height: 4px;
     width: 48px;
-    background: var(--orange);
+    background: var(--accent);
     display: block;
     margin: 20px 0;
     border: 0;
-  }
-  
-  .btn {
-    font-size: 18px;
-    padding: 8px 16px;
-  }
-  
-  .btn-default {
-    background: none;
-    border: 2px solid var(--white);
-    color: var(--white);
-  }
-  
-  .btn-primary {
-    background: none;
-    border: 2px solid var(--orange);
-    color: var(--white);
-    transition: all .1s;
-    
-    &:hover {
-      background: var(--orange);
-    }
   }
 `;
 

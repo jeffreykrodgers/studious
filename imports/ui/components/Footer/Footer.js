@@ -22,7 +22,7 @@ const StyledFooter = styled.div`
     &:hover,
     &:active,
     &:focus {
-      color: var(--orange);
+      color: var(--accent);
       text-decoration: none;
     }
   }
@@ -78,7 +78,7 @@ const StyledFooter = styled.div`
       content: '';
       height: 4px;
       width: 48px;
-      background: var(--orange);
+      background: var(--accent);
       display: block;
       margin: 20px 0;
      }    

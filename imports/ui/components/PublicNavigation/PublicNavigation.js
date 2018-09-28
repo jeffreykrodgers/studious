@@ -22,6 +22,9 @@ class PublicNavigation extends React.Component {
         <LinkContainer to="/#studios">
           <NavItem eventKey={5} href="/#studios">Studios</NavItem>
         </LinkContainer>
+        <LinkContainer to="/#pricing">
+          <NavItem eventKey={5} href="/#studios">Pricing</NavItem>
+        </LinkContainer>
       </Nav>
     );
   }
@@ -32,6 +35,7 @@ class PublicNavigation extends React.Component {
         <li><Scrollchor to="#about">About</Scrollchor></li>
         <li><Scrollchor to="#location">Location</Scrollchor></li>
         <li><Scrollchor to="#studios">Studios</Scrollchor></li>
+        <li><Scrollchor to="#pricing">Pricing</Scrollchor></li>
       </ul>
     );
   }
@@ -42,9 +46,6 @@ class PublicNavigation extends React.Component {
     return (
       <div>
         <Nav pullRight bsStyle="pills">
-          <LinkContainer to="/signup">
-            <NavItem className="orange" eventKey={1} href="/signup">Reserve Now</NavItem>
-          </LinkContainer>
           <LinkContainer to="/login">
             <NavItem eventKey={2} href="/login">Log In</NavItem>
           </LinkContainer>
