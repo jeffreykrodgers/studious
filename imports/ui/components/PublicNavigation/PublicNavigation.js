@@ -23,7 +23,7 @@ class PublicNavigation extends React.Component {
           <NavItem eventKey={5} href="/#studios">Studios</NavItem>
         </LinkContainer>
         <LinkContainer to="/#pricing">
-          <NavItem eventKey={5} href="/#studios">Pricing</NavItem>
+          <NavItem eventKey={5} href="/#pricing">Pricing</NavItem>
         </LinkContainer>
       </Nav>
     );

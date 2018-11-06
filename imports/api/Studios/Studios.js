@@ -17,11 +17,48 @@ Studios.deny({
   remove: () => true,
 });
 
-Studios.schema = new SimpleSchema({
-  owner: {
+const Use = new SimpleSchema({
+  label: {
     type: String,
-    label: 'The ID of the user this document belongs to.',
+    label: 'Description of this use',
   },
+  icon: {
+    type: String,
+    label: 'The font awesome class for this uses icon',
+  },
+});
+
+const Equipment = new SimpleSchema({
+  label: {
+    type: String,
+    label: 'Description of this use',
+  },
+  type: {
+    type: String,
+    label: 'The type of equipment',
+  },
+  brand: {
+    type: String,
+    label: 'The brand of this equipment',
+  },
+  model: {
+    type: String,
+    label: 'The model of this equipment',
+  },
+});
+
+const Image = new SimpleSchema({
+  label: {
+    type: String,
+    label: 'Description of this use',
+  },
+  url: {
+    type: String,
+    label: 'The url for this image',
+  },
+});
+
+Studios.schema = new SimpleSchema({
   createdAt: {
     type: String,
     label: 'The date this document was created.',
@@ -36,13 +73,40 @@ Studios.schema = new SimpleSchema({
       if (this.isInsert || this.isUpdate) return (new Date()).toISOString();
     },
   },
-  title: {
+  name: {
     type: String,
-    label: 'The title of the document.',
+    label: 'The name of this studio',
   },
-  body: {
+  price: {
+    type: Number,
+    label: 'The hourly rate for this studio',
+  },
+  location: {
     type: String,
-    label: 'The body of the document.',
+    label: 'The id of this studios location',
+  },
+  uses: {
+    type: Array,
+    label: 'Types of services this studio provides',
+  },
+  'uses.$': {
+    type: Use,
+  },
+  equipment: {
+    type: Array,
+    optional: true,
+    label: 'Types of services this studio provides',
+  },
+  'equipment.$': {
+    type: Equipment,
+  },
+  images: {
+    type: Array,
+    optional: true,
+    label: 'Types of services this studio provides',
+  },
+  'images.$': {
+    type: Image,
   },
 });
 

@@ -61,6 +61,10 @@ const StyledFooter = styled.div`
       font-size: 20px;
       margin-right: 28px;
     }
+    
+    i {
+      color: var(--white);
+    }
   }
   
   .col-md-4 {

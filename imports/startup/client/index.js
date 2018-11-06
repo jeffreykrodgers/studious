@@ -60,6 +60,14 @@ injectGlobal`
     --level2: 0 3px 12px;
     --level3: 0 3px 24px;
     
+    --level1-shadow: var(--level1) var(--shadow-trans);
+    --level2-shadow: var(--level2) var(--shadow-trans);
+    --level3-shadow: var(--level3) var(--shadow-trans);
+    
+    --level1-shadow-dark: var(--level1) var(--dark-trans);
+    --level2-shadow-dark: var(--level2) var(--dark-trans);
+    --level3-shadow-dark: var(--level3) var(--dark-trans);
+    
     --color-shadow: var(--level2) var(--accent-trans);
     --color-shadow-hover: var(--level3) var(--accent-trans);
     --standard-shadow: var(--level2) var(--shadow-trans);
@@ -88,6 +96,7 @@ injectGlobal`
     background: none;
     border: 0;
     border-radius: 0;
+    -webkit-appearance: none;
     border-bottom: 1px solid var(--white);
     color: var(--white);
     padding: 0;
@@ -150,6 +159,15 @@ injectGlobal`
       border: 2px solid var(--accent);
       box-shadow: var(--color-shadow-hover);
     }
+  }
+  
+  .input-group-addon:first-child {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #ffffff;
+    padding: 0;
+    padding-right: 8px;
   }
 
   @media screen and (min-width: 768px) {

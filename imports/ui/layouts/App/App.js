@@ -15,7 +15,7 @@ import Navigation from '../../components/Navigation/Navigation';
 import Authenticated from '../../components/Authenticated/Authenticated';
 import Authorized from '../../components/Authorized/Authorized';
 import Public from '../../components/Public/Public';
-import Index from '../../pages/Index/Index';
+import Marketing from '../../pages/Marketing/Marketing';
 import Documents from '../../pages/Documents/Documents';
 import NewDocument from '../../pages/Documents/NewDocument/NewDocument';
 import ViewDocument from '../../pages/Documents/ViewDocument/ViewDocument';
@@ -121,6 +121,10 @@ const StyledApp = styled.div`
     font-weight: 200;
   }
   
+  i {
+    color: var(--accent);
+  }
+  
   hr {
     height: 4px;
     width: 48px;
@@ -168,7 +172,7 @@ class App extends React.Component {
         <Navigation {...props} {...state} />
         <Grid fluid>
           <Switch>
-            <Route exact name="index" path="/" component={Index} />
+            <Route exact name="index" path="/" component={Marketing} />
             <Authenticated exact path="/documents" component={Documents} setAfterLoginPath={setAfterLoginPath} {...props} {...state} />
             <Authenticated exact path="/documents/new" component={NewDocument} setAfterLoginPath={setAfterLoginPath} {...props} {...state} />
             <Route exact path="/documents/:_id" component={ViewDocument} />
